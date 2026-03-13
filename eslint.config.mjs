@@ -1,33 +1,64 @@
-import eslint from "@eslint/js";
-import tseslint from "typescript-eslint";
-import love from "eslint-config-love";
-import globals from "globals";
+/**
+ * THIS FILE WAS AUTO-GENERATED.
+ * PLEASE DO NOT EDIT IT MANUALLY.
+ * ===============================
+ * IF YOU COPY THIS INTO AN ESLINT CONFIG, REMOVE THIS COMMENT BLOCK.
+ */
 
-export default tseslint.config(
-    {
-        ignores: ["dist/", "node_modules/", "coverage/"],
+import path from 'node:path'
+
+import { includeIgnoreFile } from '@eslint/compat'
+import js from '@eslint/js'
+import { defineConfig } from 'eslint/config'
+import { configs, plugins, rules } from 'eslint-config-airbnb-extended'
+
+const gitignorePath = path.resolve('.', '.gitignore')
+
+const jsConfig = defineConfig([
+  // ESLint recommended config
+  {
+    name: 'js/config',
+    ...js.configs.recommended,
+  },
+  // Stylistic plugin
+  plugins.stylistic,
+  // Import X plugin
+  plugins.importX,
+  // Airbnb base recommended config
+  ...configs.base.recommended,
+  // Strict import rules
+  rules.base.importsStrict,
+])
+
+const nodeConfig = defineConfig([
+  // Node plugin
+  plugins.node,
+  // Airbnb Node recommended config
+  ...configs.node.recommended,
+])
+
+const typescriptConfig = defineConfig([
+  // TypeScript ESLint plugin
+  plugins.typescriptEslint,
+  // Airbnb base TypeScript config
+  ...configs.base.typescript,
+  // Strict TypeScript rules
+  rules.typescript.typescriptEslintStrict,
+])
+
+export default defineConfig([
+  // Ignore files and folders listed in .gitignore
+  includeIgnoreFile(gitignorePath),
+  // JavaScript config
+  ...jsConfig,
+  // Node config
+  ...nodeConfig,
+  // TypeScript config
+  ...typescriptConfig,
+  {
+    rules: {
+      '@stylistic/semi': ['error', 'never'],
+      '@typescript-eslint/method-signature-style': 'on',
     },
-    {
-        files: ["**/*.ts", "**/*.tsx"],
-        extends: [
-            eslint.configs.recommended,
-            ...tseslint.configs.recommended,
-            love,
-        ],
-        languageOptions: {
-            globals: { ...globals.node }
-        },
-        rules: {
-            "no-console": "off",
-            "@typescript-eslint/no-explicit-any": "warn",
-            "@typescript-eslint/explicit-function-return-type": "off",
-            "@typescript-eslint/no-empty-function": "off",
-            "@typescript-eslint/prefer-nullish-coalescing": "off",
-            "@typescript-eslint/no-extraneous-class": "off",
-            "@typescript-eslint/consistent-type-definitions": "off",
-            "@typescript-eslint/no-magic-numbers": "off",
-            quotes: ["error", "single", { allowTemplateLiterals: true }],
-            semi: ["error", "never"],
-        },
-    }
-);
+  },
+])
