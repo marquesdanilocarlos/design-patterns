@@ -1,4 +1,4 @@
-import FlightTicket from "@/creational/builder/flight-ticket";
+import FlightTicket from "@/creational/builder/flight-ticket/flight-ticket";
 
 export default class FlightTicketBuilder {
     airline!: string

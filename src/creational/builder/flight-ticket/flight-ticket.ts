@@ -1,4 +1,4 @@
-import FlightTicketBuilder from "@/creational/builder/flight-ticket-builder";
+import FlightTicketBuilder from "@/creational/builder/flight-ticket/flight-ticket-builder";
 
 export default class FlightTicket {
     private readonly _airline: string
