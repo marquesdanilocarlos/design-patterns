@@ -2,7 +2,7 @@ import Location from "@/creational/factory/location";
 import * as crypto from "node:crypto";
 import Segment from "@/creational/factory/segment";
 
-export default class Ride {
+export default abstract class Ride {
     private _rideId: string
     private _lastLocation: Location
 
@@ -15,14 +15,9 @@ export default class Ride {
         this._lastLocation = newLocation
     }
 
-    calculateFare(segments: Segment[]) {
-        let total = 0
-        for (const segment of segments) {
-            const distance = segment.getDistance()
-            total += distance * 4
-        }
-        return total
-    }
+    abstract calculateFare(segments: Segment[]): number
+
+    abstract createSegment(rideId: string, from: Location, to: Location): Segment
 
     get rideId(): string {
         return this._rideId;
