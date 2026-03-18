@@ -12,8 +12,12 @@ export default class TimeRide extends Ride {
         return total
     }
 
-    createSegment(rideId: string, from: Location, to: Location): TimeSegment {
-        return new TimeSegment(rideId, from, to)
+    createSegment(from: Location, to: Location): TimeSegment {
+        return new TimeSegment(this.rideId, from, to)
     }
 
+    static create(latitude: number, longitude: number, date: Date): TimeRide {
+        const rideId = crypto.randomUUID()
+        return new TimeRide(rideId, latitude, longitude, date)
+    }
 }

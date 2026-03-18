@@ -12,7 +12,12 @@ export default class DistanceRide extends Ride {
         return total
     }
 
-    createSegment(rideId: string, from: Location, to: Location): DistanceSegment {
-        return new DistanceSegment(rideId, from, to)
+    createSegment(from: Location, to: Location): DistanceSegment {
+        return new DistanceSegment(this.rideId, from, to)
+    }
+
+    static create(latitude: number, longitude: number, date: Date): DistanceRide {
+        const rideId = crypto.randomUUID()
+        return new DistanceRide(rideId, latitude, longitude, date)
     }
 }

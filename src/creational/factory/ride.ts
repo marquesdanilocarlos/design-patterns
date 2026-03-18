@@ -3,11 +3,10 @@ import * as crypto from "node:crypto";
 import Segment from "@/creational/factory/segment";
 
 export default abstract class Ride {
-    private _rideId: string
     private _lastLocation: Location
 
-    constructor(latitude: number, longitude: number, date: Date) {
-        this._rideId = crypto.randomUUID()
+    constructor(private _rideId: string, latitude: number, longitude: number, date: Date) {
+        //this._rideId = crypto.randomUUID()
         this._lastLocation = new Location(latitude, longitude, date)
     }
 
@@ -17,7 +16,7 @@ export default abstract class Ride {
 
     abstract calculateFare(segments: Segment[]): number
 
-    abstract createSegment(rideId: string, from: Location, to: Location): Segment
+    abstract createSegment(from: Location, to: Location): Segment
 
     get rideId(): string {
         return this._rideId;

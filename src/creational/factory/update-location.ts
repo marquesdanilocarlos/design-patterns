@@ -1,7 +1,6 @@
 import Location from "@/creational/factory/location";
 import RideRepository from "@/creational/factory/ride-repository";
 import SegmentRepository from "@/creational/factory/segment-repository";
-import DistanceSegment from "@/creational/factory/distance-segment";
 
 export type UpdateLocationInput = {
     rideId: string
@@ -19,7 +18,7 @@ export default class UpdateLocation {
     async execute(input: UpdateLocationInput): Promise<void> {
         const ride = await this.rideRepository.getRideById(input.rideId)
         const newLocation = new Location(input.latitude, input.longitude, input.date)
-        const segment = ride.createSegment(ride.rideId, ride.lastLocation, newLocation)
+        const segment = ride.createSegment(ride.lastLocation, newLocation)
         await this.rideRepository.update(ride)
         await this.segmentRepository.save(segment)
     }
