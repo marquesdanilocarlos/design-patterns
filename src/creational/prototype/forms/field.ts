@@ -1,4 +1,4 @@
-import Prototype from "@/creational/prototype/prototype";
+import Prototype from "@/creational/prototype/forms/prototype";
 import * as crypto from "node:crypto";
 
 export default class Field implements Prototype {

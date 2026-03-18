@@ -1,5 +1,5 @@
-import FormRepository from "@/creational/prototype/form-repository";
-import Form from "@/creational/prototype/form";
+import FormRepository from "@/creational/prototype/forms/form-repository";
+import Form from "@/creational/prototype/forms/form";
 
 export default class MemoryFormRepository implements FormRepository {
     private forms: Form[] = []

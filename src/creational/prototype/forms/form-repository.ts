@@ -1,4 +1,4 @@
-import Form from "@/creational/prototype/form";
+import Form from "@/creational/prototype/forms/form";
 
 export default interface FormRepository {
     getById(formId: string): Promise<Form>

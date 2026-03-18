@@ -1,6 +1,6 @@
-import CopyForm from "@/creational/prototype/copy-form";
-import MemoryFormRepository from "@/creational/prototype/memory-form-repository";
-import Form from "@/creational/prototype/form";
+import CopyForm from "@/creational/prototype/forms/copy-form";
+import MemoryFormRepository from "@/creational/prototype/forms/memory-form-repository";
+import Form from "@/creational/prototype/forms/form";
 
 test('Deve copiar um formulário', async() => {
     const formRepository = new MemoryFormRepository()

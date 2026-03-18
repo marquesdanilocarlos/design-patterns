@@ -1,5 +1,5 @@
-import Field from "@/creational/prototype/field";
-import Prototype from "@/creational/prototype/prototype";
+import Field from "@/creational/prototype/forms/field";
+import Prototype from "@/creational/prototype/forms/prototype";
 
 export default class Form implements Prototype{
     public fields: Field[] = []
