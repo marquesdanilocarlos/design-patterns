@@ -31,5 +31,8 @@
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.57.0"
+  },
+  "dependencies": {
+    "currency.js": "^2.0.4"
   }
 }
