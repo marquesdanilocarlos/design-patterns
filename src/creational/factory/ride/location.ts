@@ -1,4 +1,4 @@
-import Coordinate from "@/creational/factory/coordinate";
+import Coordinate from "@/creational/factory/ride/coordinate";
 
 export default class Location {
     private _coord: Coordinate

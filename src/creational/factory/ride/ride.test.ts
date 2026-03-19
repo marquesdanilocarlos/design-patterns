@@ -1,8 +1,6 @@
-import Location from "@/creational/factory/location";
-import DistanceRide from "@/creational/factory/distance-ride";
-import TimeRide from "@/creational/factory/time-ride";
-import DistanceSegment from "@/creational/factory/distance-segment";
-import TimeSegment from "@/creational/factory/time-segment";
+import Location from "@/creational/factory/ride/location";
+import DistanceRide from "@/creational/factory/ride/distance-ride";
+import TimeRide from "@/creational/factory/ride/time-ride";
 
 test('Deve criar e calcular a tarifa de uma corrida por distância', async () => {
     const ride = DistanceRide.create(-27.584905257808835, -48.545022195325124, new Date('2026-03-18T10:00:00'))

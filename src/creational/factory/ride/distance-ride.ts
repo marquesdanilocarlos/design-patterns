@@ -1,6 +1,6 @@
-import Ride from "@/creational/factory/ride";
-import DistanceSegment from "@/creational/factory/distance-segment";
-import Location from "@/creational/factory/location";
+import Ride from "@/creational/factory/ride/ride";
+import DistanceSegment from "@/creational/factory/ride/distance-segment";
+import Location from "@/creational/factory/ride/location";
 
 export default class DistanceRide extends Ride {
     calculateFare(segments: DistanceSegment[]): number {

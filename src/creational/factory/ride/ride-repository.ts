@@ -1,4 +1,4 @@
-import Ride from "@/creational/factory/ride";
+import Ride from "@/creational/factory/ride/ride";
 
 export default interface RideRepository {
     getRideById(rideId: string): Promise<Ride>

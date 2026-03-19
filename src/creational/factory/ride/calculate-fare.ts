@@ -1,7 +1,5 @@
-import Location from "@/creational/factory/location";
-import Segment from "@/creational/factory/segment";
-import RideRepository from "@/creational/factory/ride-repository";
-import SegmentRepository from "@/creational/factory/segment-repository";
+import RideRepository from "@/creational/factory/ride/ride-repository";
+import SegmentRepository from "@/creational/factory/ride/segment-repository";
 
 export type CalculateFareOutput = {
     fare: number

@@ -1,6 +1,5 @@
-import Location from "@/creational/factory/location";
-import * as crypto from "node:crypto";
-import Segment from "@/creational/factory/segment";
+import Location from "@/creational/factory/ride/location";
+import Segment from "@/creational/factory/ride/segment";
 
 export default abstract class Ride {
     private _lastLocation: Location

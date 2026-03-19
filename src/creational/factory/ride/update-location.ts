@@ -1,6 +1,6 @@
-import Location from "@/creational/factory/location";
-import RideRepository from "@/creational/factory/ride-repository";
-import SegmentRepository from "@/creational/factory/segment-repository";
+import Location from "@/creational/factory/ride/location";
+import RideRepository from "@/creational/factory/ride/ride-repository";
+import SegmentRepository from "@/creational/factory/ride/segment-repository";
 
 export type UpdateLocationInput = {
     rideId: string

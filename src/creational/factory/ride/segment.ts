@@ -1,4 +1,4 @@
-import Location from "@/creational/factory/location";
+import Location from "@/creational/factory/ride/location";
 
 export default abstract class Segment {
     constructor(

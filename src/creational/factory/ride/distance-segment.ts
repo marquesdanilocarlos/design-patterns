@@ -1,4 +1,4 @@
-import Segment from "@/creational/factory/segment";
+import Segment from "@/creational/factory/ride/segment";
 
 export default class DistanceSegment extends Segment {
     getDistance(): number {

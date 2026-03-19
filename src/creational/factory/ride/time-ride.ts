@@ -1,6 +1,6 @@
-import Ride from "@/creational/factory/ride";
-import TimeSegment from "@/creational/factory/time-segment";
-import Location from "@/creational/factory/location";
+import Ride from "@/creational/factory/ride/ride";
+import TimeSegment from "@/creational/factory/ride/time-segment";
+import Location from "@/creational/factory/ride/location";
 
 export default class TimeRide extends Ride {
     calculateFare(segments: TimeSegment[]): number {

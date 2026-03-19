@@ -1,9 +1,9 @@
-import UpdateLocation, {UpdateLocationInput} from "@/creational/factory/update-location";
-import {RideRepositoryMemory} from "@/creational/factory/ride-repository";
-import {SegmentRepositoryMemory} from "@/creational/factory/segment-repository";
-import CalculateFare from "@/creational/factory/calculate-fare";
-import DistanceRide from "@/creational/factory/distance-ride";
-import TimeRide from "@/creational/factory/time-ride";
+import UpdateLocation, {UpdateLocationInput} from "@/creational/factory/ride/update-location";
+import {RideRepositoryMemory} from "@/creational/factory/ride/ride-repository";
+import {SegmentRepositoryMemory} from "@/creational/factory/ride/segment-repository";
+import CalculateFare from "@/creational/factory/ride/calculate-fare";
+import DistanceRide from "@/creational/factory/ride/distance-ride";
+import TimeRide from "@/creational/factory/ride/time-ride";
 
 test('Deve atualizar a localização de uma corrida por distância', async () => {
     const rideRepository = new RideRepositoryMemory()

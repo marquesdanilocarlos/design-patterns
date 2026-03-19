@@ -1,4 +1,4 @@
-import Segment from "@/creational/factory/segment";
+import Segment from "@/creational/factory/ride/segment";
 
 export default interface SegmentRepository {
     save(ride: Segment): Promise<void>
