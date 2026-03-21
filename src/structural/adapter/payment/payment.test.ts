@@ -1,8 +1,8 @@
-import PagFacil from "@/structural/adapter/pag-facil";
-import Billing from "@/structural/adapter/billing";
-import TopPagamentosAdapter from "@/structural/adapter/top-pagamentos.adapter";
-import TopPagamentos from "@/structural/adapter/top-pagamentos";
-import PagFacilAdapter from "@/structural/adapter/pag-facil.adapter";
+import PagFacil from "@/structural/adapter/payment/pag-facil";
+import Billing from "@/structural/adapter/payment/billing";
+import TopPagamentosAdapter from "@/structural/adapter/payment/top-pagamentos.adapter";
+import TopPagamentos from "@/structural/adapter/payment/top-pagamentos";
+import PagFacilAdapter from "@/structural/adapter/payment/pag-facil.adapter";
 
 test('Deve realizar um pagamento com PagFacil implementando diretamente a classe concreta', () => {
     const pagFacil = new PagFacil({

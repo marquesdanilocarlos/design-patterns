@@ -1,5 +1,5 @@
-import TopPagamentos from "@/structural/adapter/top-pagamentos"
-import PaymentGateway from "@/structural/adapter/payment-gateway"
+import TopPagamentos from "@/structural/adapter/payment/top-pagamentos"
+import PaymentGateway from "@/structural/adapter/payment/payment-gateway"
 
 export default class TopPagamentosAdapter implements PaymentGateway {
     private tempCvv?: string | null = null

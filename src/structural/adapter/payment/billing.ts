@@ -1,4 +1,4 @@
-import PaymentGateway from "@/structural/adapter/payment-gateway";
+import PaymentGateway from "@/structural/adapter/payment/payment-gateway";
 
 type BillingProps = {
     gateway: PaymentGateway;
